@@ -1,0 +1,12 @@
+services:
+  carteira:
+    build: .
+    container_name: carteira
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - BRAPI_TOKEN=dHEPRrk6atQozX8Y2rmZ8K
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./data:/data
